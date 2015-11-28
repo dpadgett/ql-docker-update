@@ -11,3 +11,4 @@ if [ "$username" == "" ]; then
 fi
 
 rsync -avciz --progress /home/quake/ "$username"@"$hostname":.
+ssh "$username"@"$hostname" ./restart-server.sh
